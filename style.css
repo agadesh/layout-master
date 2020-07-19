@@ -13,23 +13,38 @@ body {
   padding: 0;
   margin: 0;
 }
+.nav-bar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
 .contact {
   margin-left: auto;
 }
 .nav-links {
   display: block;
-  padding: 0.7em;
+  padding: 1em 2em;
   text-decoration: none;
   color: inherit;
-  font-size: 2vh;
+  font-size: 1em;
   color: #fff;
 }
+@media only screen and (max-width: 600px) {
+  .nav-list {
+    font-size: 0.5em;
+  }
+  .nav-links {
+    padding: 1em 1em;
+  }
+}
 .cover {
-  height: 60%;
+  height: 65vh;
   background: url(img/undraw.png) no-repeat center;
   background-size: contain;
   border: 2px solid black;
   transition: all 0.5s;
+  filter: hue-rotate(-20deg);
 }
 .cover:hover {
   border-color: #adadad;
@@ -41,37 +56,45 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: stretch;
   border-bottom: 1px solid black;
+  background: linear-gradient(to left, #3253be, #477cca);
 }
 .image {
   width: 200px;
   height: 200px;
   padding: 20px;
 }
-
 .img-div {
-  background-color: rgb(111, 161, 236);
-  border: 4px solid #353535;
+  background-color: rgb(65, 65, 65);
+  border: 4px solid #2b58b9;
   border-radius: 5px;
   text-align: center;
   font-size: 1.2em;
-  color: #2b2b2c;
+  color: #b9b8b8;
   transition: all 0.5s;
 }
 .img-div:hover {
   box-shadow: 2px 2px 10px 4px rgb(39, 39, 39);
-}
-.img-div:hover,
-.nav-links:hover {
   transform: scale(1.02);
+  color: #ffffff;
+}
+.img-div-text {
+  border: 2px solid #2b2929;
+  line-height: 5px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  background-color: #054099;
+}
+.nav-links:hover,
+.profile-link:hover {
   color: #cacaca;
 }
 .profile-link:active,
 .nav-links:active {
-  color: #fff;
+  color: #414141;
 }
 .profile-link {
   text-decoration: none;
-  color: blue;
+  color: #2600ff;
 }
 .foot {
   height: 3.5vh;
@@ -80,14 +103,13 @@ body {
   line-height: 3.5vh;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  background: linear-gradient(to left, rgb(8, 221, 97), rgb(22, 107, 233));
 }
 
 /***********************************************************************
- *  Blue Background
- **********************************************************************/
+*  Blue Background
+**********************************************************************/
 .blue {
-  background: #7abcff; /* Old browsers */
+  background: #837aff; /* Old browsers */
   background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #4096ee)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* Chrome10+,Safari5.1+ */
