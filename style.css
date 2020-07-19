@@ -9,19 +9,16 @@ body {
 }
 .nav-list {
   list-style: none;
-  overflow: hidden;
+  display: flex;
   padding: 0;
   margin: 0;
 }
-.nav-li {
-  float: left;
-}
 .contact {
-  float: right;
+  margin-left: auto;
 }
 .nav-links {
   display: block;
-  padding: 1vh;
+  padding: 0.7em;
   text-decoration: none;
   color: inherit;
   font-size: 2vh;
@@ -35,7 +32,7 @@ body {
   transition: all 0.5s;
 }
 .cover:hover {
-  border: 10px solid #adadad;
+  border-color: #adadad;
 }
 .grid {
   display: grid;
